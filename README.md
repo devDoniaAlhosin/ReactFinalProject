@@ -1,9 +1,9 @@
 1. To Run Project
-  npm run dev
+  - npm run dev
 
   2. To Run json Server
-  npm i json-server
-  npm run serve
+  - npm i json-server
+  - npm run serve
 =========================================================================
 
 This website was developed using React.js, offering a dynamic and responsive user experience across mobile and tablet devices. Utilizing the JSON-server, the site efficiently handles data fetching for products and user information, ensuring a smooth and interactive flow. Below are the key pages and functionalities included:
