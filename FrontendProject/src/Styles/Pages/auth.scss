@@ -1,0 +1,272 @@
+.Auth--body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .Auth--breadcrumb {
+  }
+}
+
+.Auth--container {
+  padding-inline: 2rem;
+  padding-block: 4rem;
+  .Auth--box {
+    width: 40%;
+    margin: auto;
+    background-color: $white;
+    box-shadow: 0 0 10px rgba($color: $black, $alpha: 0.5);
+    min-height: 60vh;
+    padding-inline: 0.5rem;
+    padding-block: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .Auth--AuthPages {
+      height: 50vh;
+      width: 80%;
+      // background-color: teal;
+
+      .LoginForm {
+        .input--group {
+          position: relative;
+          margin-bottom: 1rem;
+          width: 100%;
+
+          input {
+            width: 100%;
+            height: 5vh;
+            border-radius: 3px;
+            border: 1px solid rgba($color: $black, $alpha: 0.1);
+            outline: 0;
+            padding-inline-start: 1.5rem;
+          }
+          input[type="checkbox"] {
+            width: 20px;
+            height: 15px;
+            border: 2px solid rgba($color: #ffffff, $alpha: 0.2);
+            border-radius: 5px;
+            outline: none;
+            margin-right: 0.25rem;
+
+            &:checked {
+              background-color: $main;
+              border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+            }
+          }
+
+          label {
+            position: relative;
+            top: 3px; /* Adjust as needed */
+          }
+        }
+        .LoginForm--header {
+          margin-bottom: 1.5rem;
+        }
+        .form--btn {
+          width: 100%;
+          height: 5rem;
+          padding-block: 1rem;
+
+          button {
+            outline: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background: $main;
+            color: $white;
+            font-size: 1rem;
+            border: 0;
+            border-radius: 10px;
+            transition: ease-out 0.3s;
+            position: relative;
+            z-index: 1;
+            &:hover {
+              color: $main;
+            }
+            &::before {
+              content: "";
+              transition: 0.5s all ease-in-out;
+              position: absolute;
+              top: 0;
+              right: 50%;
+              left: 50%;
+              bottom: 0;
+              opacity: 0;
+              background-color: $white;
+              color: $main;
+              border: 0.5px solid $main;
+            }
+            &:hover::before {
+              border-radius: 10px;
+              color: $main;
+              background-color: $white;
+              transition: 0.5s all ease;
+              left: 0;
+              right: 0;
+              opacity: 1;
+              z-index: -1;
+            }
+          }
+        }
+        &.registerForm {
+          .Auth--header {
+            bottom: 25%;
+            right: 40%;
+          }
+        }
+      }
+    }
+  }
+  .Auth--header {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    right: 40%;
+  }
+}
+.validationError {
+  color: red;
+  font-size: 1rem;
+}
+
+// Or section
+.orline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  .or-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc; /* Adjust line color */
+  }
+
+  .or-text {
+    margin: 0 10px; /* Adjust space around 'Or' text */
+    font-weight: bold;
+  }
+}
+.or--container {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  .google--content {
+    background-color: #d85040;
+    width: 25%;
+    height: 5vh;
+    border-radius: 3px;
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    outline: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    span {
+      margin-left: 5px;
+    }
+    &:hover {
+      background-color: #d84f40df;
+    }
+  }
+  .facebook--content {
+    background-color: #3b5898;
+    color: $white;
+    width: 25%;
+    height: 5vh;
+    border-radius: 3px;
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    outline: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    span {
+      margin-left: 5px;
+    }
+    &:hover {
+      background-color: #3b5898e9;
+    }
+  }
+}
+
+// ...........................................................................
+// ===========================================================================
+//                                            >Media Query>
+// ===========================================================================
+
+@media (max-width: 991px) {
+  .Auth--container {
+    padding-inline: 0rem;
+    .Auth--box {
+      width: 90%;
+      .Auth--AuthPages {
+        height: 50vh;
+        width: 90%;
+      }
+    }
+  }
+  .Auth--container .Auth--box .Auth--AuthPages .LoginForm .LoginForm--header {
+    margin-bottom: 4.5rem;
+  }
+  .Auth--container .Auth--header {
+    cursor: pointer;
+    position: absolute;
+    bottom: 27%;
+    right: 31%;
+  }
+}
+
+@media (max-width: 767px) {
+  .Auth--body {
+    .Auth--breadcrumb {
+      .breadcrumb--content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .Auth--container {
+      padding-inline: 0;
+      padding-block: 0rem;
+      .Auth--box {
+        width: 90%;
+        height: 100%;
+        .Auth--AuthPages {
+          width: 90%;
+          height: 50vh;
+          .LoginForm {
+          }
+        }
+        .Auth--header {
+          bottom: 5%;
+          right: 19%;
+        }
+      }
+    }
+  }
+  .or--container .google--content,
+  .or--container .facebook--content {
+    width: 40%;
+    height: 6vh;
+  }
+  .Auth--container .Auth--box .Auth--AuthPages .LoginForm .LoginForm--header {
+    margin-bottom: 1.5rem;
+  }
+}

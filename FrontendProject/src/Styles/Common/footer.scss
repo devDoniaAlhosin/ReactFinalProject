@@ -1,0 +1,169 @@
+.footer {
+  background-color: #202325;
+  color: $white;
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.footer .container {
+  max-width: 100%;
+  width: 75%;
+}
+.footer .footer-top {
+  width: 100%;
+}
+.footer .footer-top .row {
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.footer .footer-top .row .footer-items {
+  width: calc((100% / 5) - 20px);
+}
+
+.footer .footer-top .row .footer-items:nth-child(2) {
+  width: 20%;
+}
+
+.footer .footer-top .row .footer-items img {
+  margin-bottom: 30px;
+}
+.footer .footer-top .row .footer-items h6 {
+  font-size: 18px;
+  margin-bottom: 29px;
+}
+.footer .footer-top .row .footer-items p {
+  color: #868c98;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.footer .footer-top .row .footer-items .footer-list {
+}
+.footer .footer-top .row .footer-items .footer-list li {
+  margin-bottom: 20px;
+}
+.footer .footer-top .row .footer-items .footer-list li a {
+  color: #868c98;
+  /* it i used trasform translate beacouse its inline ----- display: inline-block; */
+  transition: all 0.4s ease-in;
+}
+.footer .footer-top .row .footer-items .footer-list li:hover a {
+  color: $main;
+  padding-left: 10px;
+}
+
+.footer .footer-bottom {
+  border-top: 1px solid white;
+  margin: 30px;
+}
+.footer-bottom .row {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 61px;
+  border-top: 1px solid white;
+  padding: 20px 0;
+}
+.footer-bottom .row p {
+  color: #888;
+}
+.footer-icon {
+  width: 100%;
+}
+.footer-icon a {
+  font-size: 20px;
+  margin-right: 20px;
+  color: $white;
+  display: inline-block;
+  transition: all 0.6s ease-in;
+  &:hover {
+    color: $main;
+    transform: rotateY(360deg);
+  }
+}
+.footer-icon a i {
+  transition: all 0.6s ease-in;
+}
+.footer .footer-top .row .footer-items .footer-list li a svg {
+  margin-right: 8px;
+}
+.row-vsa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .footer-vsa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Media >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media (max-width: 991px) {
+  /* ======================footer bottom ========================= */
+
+  .footer-bottom .row .p {
+    width: 64%;
+    line-height: 1.6;
+  }
+  .footer-bottom .row .footer-icon {
+    width: 30%;
+    text-align: center;
+  }
+  .row-vsa {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer .footer-top .row .footer-items {
+    width: calc((100% / 3) - 20px);
+  }
+  .footer-icon a {
+    margin-right: 12px;
+  }
+  .footer .footer-top .row .footer-items {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* ======================footer bottom ========================= */
+
+  .footer-bottom .row .p {
+    width: 64%;
+    line-height: 1.6;
+  }
+  .footer-icon {
+    width: 30%;
+    text-align: center;
+  }
+  /* ===========================
+            footer
+================================= */
+
+  .footer .footer-top .row {
+    display: block;
+  }
+  .footer .footer-top .row .footer-items {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer .footer-top .row .footer-items:nth-child(2) {
+    width: 100%;
+    text-align: left;
+  }
+  .footer-bottom .row {
+    display: block;
+  }
+  .footer-icon {
+    width: 100%;
+  }
+  .footer-bottom .row p {
+    margin-bottom: 25px;
+  }
+  .row-vsa {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

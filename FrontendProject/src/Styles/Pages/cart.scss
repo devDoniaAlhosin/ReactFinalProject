@@ -1,0 +1,272 @@
+.cart--wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  h1 {
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .cart--project {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .cart--shop {
+      flex: 75%;
+      .cart--box {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        background: $white;
+        transition: all 0.6s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+        &:hover {
+          transform: scale(1.02);
+        }
+        img {
+          width: auto;
+          height: 200px;
+          object-fit: fill;
+        }
+        .cart--content {
+          padding: 20px;
+          position: relative;
+          width: 100%;
+          h3 {
+            margin-bottom: 30px;
+          }
+          h4 {
+            margin-bottom: 14px;
+            color: $main;
+          }
+          .btn--area {
+            border: 1px solid $main;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 25px;
+            background-color: $white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.4s all ease-in-out;
+            button {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              border: none;
+              outline: none;
+              color: $main;
+              background-color: $white;
+              transition: 0.4s all ease-in-out;
+              svg {
+                margin-right: 5px;
+                color: $main;
+              }
+            }
+            &:hover {
+              background-color: $main;
+              button {
+                color: $white;
+                background-color: $main;
+                svg {
+                  color: $white;
+                }
+              }
+            }
+          }
+          .cart--unit {
+            input {
+              border: 1px solid $main;
+              border-radius: 10px;
+              width: 50px;
+              padding: 8px;
+              text-align: center;
+            }
+            svg {
+            }
+          }
+        }
+      }
+    }
+    .right-bar {
+      flex: 25%;
+      margin-left: 20px;
+      padding: 20px;
+      height: 400px;
+      border-radius: 5px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+      hr {
+        margin-bottom: 25px;
+      }
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        font-size: 20px;
+      }
+      a {
+        border: 1px solid $main;
+        border-radius: 10px;
+        background-color: $white;
+        color: $main;
+        display: block;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.4s all ease-in-out;
+        svg {
+          margin-right: 7px;
+        }
+      }
+      &:hover {
+        a {
+          background-color: $main;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.cart--empty {
+  margin: 25px auto;
+  padding: 30px 0;
+  border: 1px solid $main;
+  border-radius: 10px;
+  width: 50%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  svg {
+    color: $main;
+  }
+  h4 {
+    color: $main;
+    font-size: 26px;
+  }
+  .empty-wishlist-btn {
+    width: 60%;
+    height: 40px;
+    margin-left: 20px;
+    button {
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background: $main;
+      color: $white;
+      font-size: 1rem;
+      border: 0;
+      border-radius: 10px;
+      transition: ease-out 0.3s;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        font-size: 14px;
+        color: $white;
+      }
+      &:hover {
+        a {
+          color: $main;
+        }
+      }
+      &::before {
+        content: "";
+        transition: 0.5s all ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        background-color: $white;
+        color: $main;
+        border: 0.5px solid $main;
+      }
+      &:hover::before {
+        border-radius: 10px;
+        color: $main;
+        background-color: $white;
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// ========================Media Quary =================
+
+@media screen and (max-width: 700px) {
+  .cart--content {
+    h3 {
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    .btn2 {
+      display: none;
+    }
+  }
+  .cart--box {
+    height: 150px;
+  }
+  .cart--box img {
+    height: 150px;
+    width: 50%;
+  }
+  .btn--area {
+    bottom: 10px;
+  }
+  .cart--wrapper .cart--project .cart--shop .cart--box .cart--content h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .cart--empty h4 {
+    color: #ff324d;
+    font-size: 19px;
+  }
+  .cart--empty {
+    padding: 0;
+  }
+  .cart--empty .empty-wishlist-btn {
+    width: 79%;
+    height: 40px;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cart--project {
+    flex-direction: column;
+  }
+  .right-bar {
+    margin-left: 0;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  .cart--shop {
+    margin: auto;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .cart--wrapper {
+    max-width: 95%;
+  }
+}
